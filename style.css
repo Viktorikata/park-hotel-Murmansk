@@ -1,7 +1,7 @@
 /*Fonts*/
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Medium.otf');
+    src: url('./fonts/Bounded-Medium.woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -9,35 +9,35 @@
 
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Bold.otf');
+    src: url('./fonts/Bounded-Bold.woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Regular.otf');
+    src: url('./fonts//Bounded-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Light.otf');
+    src: url('./fonts/Bounded-Light.woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Kintsugi";
-    src: url('./fonts/Kintsugi_LVRG-Regular.otf');
+    src: url('./fonts/Kintsugi_LVRG-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "X-TYPEWRITER";
-    src: url('./fonts/X-TYPEWRITER.TTF');
+    src: url('./fonts/XTypewriter-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
