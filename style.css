@@ -822,13 +822,10 @@ margin-top: 1.2rem;
     flex-direction: column;
 
 }
-.site-footer {
-    margin: 6.9rem 1.6rem;
-
-}
 .site-footer-mobile{
     display: flex;
     flex-direction: column;
+    margin: 6.9rem 1.6rem;
 }
 .site-footer-img{
     width: 10rem;
