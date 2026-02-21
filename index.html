@@ -30,9 +30,48 @@
                 <img src="./image/mainLogo.png" alt="Экспедиция — парк-отель Мурманск" class="site-header__mobile-logo-img">
                 </a>
 
-                <button class="site-header__mobile-btn" type="button" aria-label="Открыть меню">
+                <button class="site-header__mobile-btn" type="button" aria-label="Открыть меню" data-burger-open>
                 <img class="site-header__mobile-btn2" src="./icons/Burger-menu.svg" alt="" aria-hidden="true">
                 </button>
+            </div>
+
+            <div class="mobile-menu" hidden data-burger>
+                <div class="mobile-menu__backdrop" data-burger-close></div>
+
+                <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Меню">
+                    <div class="mobile-menu__top">
+                    <button class="mobile-menu__icon" type="button" aria-label="Календарь">
+                        <img class="mobile-menu__icon1" src="./icons/calendar.svg" alt="" aria-hidden="true">
+                    </button>
+
+                    <a class="mobile-menu__logo" href="/" aria-label="На главную">
+                        <img src="./image/mainLogo.png" alt="Экспедиция — парк-отель Мурманск">
+                    </a>
+
+                    <button class="mobile-menu__icon" type="button" aria-label="Закрыть меню" data-burger-close>
+                        <img class="mobile-menu__icon2"src="./icons/Subtract-mobile.svg" alt="" aria-hidden="true">
+                    </button>
+                    </div>
+
+                    <nav class="mobile-menu__nav" aria-label="Навигация">
+                    <a class="mobile-menu__link mobile-menu__link1" href="#">Номера и цены</a>
+                    <a class="mobile-menu__link mobile-menu__link2" href="#">Услуги</a>
+
+                    <div class="mobile-menu__group">
+                        <a class="mobile-menu__sublink" href="#">Проживание</a>
+                        <a class="mobile-menu__sublink" href="#">Туры и экспедиции</a>
+                        <a class="mobile-menu__sublink" href="#">Отдых и досуг</a>
+                        <a class="mobile-menu__sublink" href="#">Автокемпинг</a>
+                    </div>
+
+                    <a class="mobile-menu__link mobile-menu__link3" href="#">Бар зимовка</a>
+                    <a class="mobile-menu__link mobile-menu__link4" href="#">Банкетный зал</a>
+                    <a class="mobile-menu__link mobile-menu__link5" href="#">О нас</a>
+                    <a class="mobile-menu__link mobile-menu__link6" href="#">Контакты</a>
+                    <a class="mobile-menu__link mobile-menu__link7" href="#">Первопроходцы севера</a>
+                    <a class="mobile-menu__link mobile-menu__link8" href="#">Спецпредложение</a>
+                    </nav>
+                </div>
             </div>
 
 
@@ -420,6 +459,29 @@
             </div>
             </div>
         </footer>
+
+
+<script>
+  const menu = document.querySelector('[data-burger]');
+  const openBtn = document.querySelector('[data-burger-open]');
+  const closeEls = document.querySelectorAll('[data-burger-close]');
+
+  function openMenu(){
+    menu.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    menu.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  openBtn?.addEventListener('click', openMenu);
+  closeEls.forEach(el => el.addEventListener('click', closeMenu));
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && !menu.hidden) closeMenu();
+  });
+</script>      
     
 </body>
 </html>
