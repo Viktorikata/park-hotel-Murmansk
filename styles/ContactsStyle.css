@@ -1062,7 +1062,7 @@ width: 20.7rem;
     gap: 1rem;
     padding: 0 ;
     width: 100%;
-    color: rgba(241,226,210,.55);
+    opacity: 50%;
     margin-top: -1.5rem;
     margin-bottom:0.8rem;
     font-size: 1.2rem;
