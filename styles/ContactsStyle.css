@@ -946,6 +946,7 @@ margin-top: 1.2rem;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1;
+    touch-action: none;
   }
 
   .mobile-menu__panel{
@@ -958,6 +959,9 @@ margin-top: 1.2rem;
     margin-top: 2.3rem;
     z-index: 2;
     transform: translateZ(0);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;     
   }
 
   .mobile-menu__top{
@@ -997,7 +1001,12 @@ margin-top: 1.2rem;
     gap: 1.6rem;
     z-index: 2;
   }
-
+    .mobile-menu__link,
+    .mobile-menu__sublink{
+        display: block;              
+        text-align: center;
+        color: #F1E2D2; 
+    }
   .mobile-menu__link{
     width: 100%;
     padding-top: 1.2rem;
@@ -1013,13 +1022,14 @@ margin-top: 1.2rem;
     content:"";
     position:absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0); 
     top: 0;
     height: 0.1px;
     background: #F1E2D2;
     opacity: 1;
-    z-index: 2;
+    z-index: 5;
     pointer-events: none;
+    height: 0.1rem;
   }
   .mobile-menu__link1::before{
     width: 16.4rem;
@@ -1052,7 +1062,7 @@ width: 20.7rem;
     gap: 1rem;
     padding: 0 ;
     width: 100%;
-    opacity: 0.5;
+    color: rgba(241,226,210,.55);
     margin-top: -1.5rem;
     margin-bottom:0.8rem;
     font-size: 1.2rem;
@@ -1060,9 +1070,9 @@ width: 20.7rem;
     letter-spacing: -0.02;
   }
   /* JS */
-  .body.is-menu-open{
+html, body { height: 100%; }
+body.is-menu-open{
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   width: 100%;

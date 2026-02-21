@@ -41,7 +41,7 @@
                 <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Меню">
                     <div class="mobile-menu__top">
                     <button class="mobile-menu__icon" type="button" aria-label="Календарь">
-                        <img class="mobile-menu__icon1" src="../icons/calendar.svg" alt="" aria-hidden="true">
+                        <img class="mobile-menu__icon1" src="../icons/Calendar.svg" alt="" aria-hidden="true">
                     </button>
 
                     <a class="mobile-menu__logo" href="/" aria-label="На главную">
@@ -463,20 +463,33 @@
 
 <script>
   const menu = document.querySelector('[data-burger]');
+  const panel = document.querySelector('.mobile-menu__panel');
   const openBtn = document.querySelector('[data-burger-open]');
   const closeEls = document.querySelectorAll('[data-burger-close]');
+
   let scrollY = 0;
 
+  function preventScroll(e) {
+    if (panel && panel.contains(e.target)) return;
+    e.preventDefault();
+  }
+
   function openMenu(){
-    scrollY = window.scrollY;
+    scrollY = window.scrollY || 0;
     menu.hidden = false;
+
     document.body.classList.add('is-menu-open');
     document.body.style.top = `-${scrollY}px`;
+
+    document.addEventListener('touchmove', preventScroll, { passive: false });
   }
 
   function closeMenu(){
     menu.hidden = true;
+
     document.body.classList.remove('is-menu-open');
+    document.removeEventListener('touchmove', preventScroll);
+
     const y = Math.abs(parseInt(document.body.style.top || '0', 10));
     document.body.style.top = '';
     window.scrollTo(0, y);
@@ -484,10 +497,11 @@
 
   openBtn?.addEventListener('click', openMenu);
   closeEls.forEach(el => el.addEventListener('click', closeMenu));
+
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape' && !menu.hidden) closeMenu();
   });
-</script>    
+</script>  
     
 </body>
 </html>
