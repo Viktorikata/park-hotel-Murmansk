@@ -465,23 +465,29 @@
   const menu = document.querySelector('[data-burger]');
   const openBtn = document.querySelector('[data-burger-open]');
   const closeEls = document.querySelectorAll('[data-burger-close]');
+  let scrollY = 0;
 
   function openMenu(){
+    scrollY = window.scrollY;
     menu.hidden = false;
     document.body.classList.add('is-menu-open');
+    document.body.style.top = `-${scrollY}px`;
   }
+
   function closeMenu(){
     menu.hidden = true;
     document.body.classList.remove('is-menu-open');
+    const y = Math.abs(parseInt(document.body.style.top || '0', 10));
+    document.body.style.top = '';
+    window.scrollTo(0, y);
   }
 
   openBtn?.addEventListener('click', openMenu);
   closeEls.forEach(el => el.addEventListener('click', closeMenu));
-
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape' && !menu.hidden) closeMenu();
   });
-</script>      
+</script>    
     
 </body>
 </html>
