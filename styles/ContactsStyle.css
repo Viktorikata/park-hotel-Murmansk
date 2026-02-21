@@ -1,7 +1,7 @@
 /*Fonts*/
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Medium.woff2');
+    src: url('../fonts/Bounded-Medium.woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -9,35 +9,35 @@
 
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Bold.woff2');
+    src: url('../fonts/Bounded-Bold.woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts//Bounded-Regular.woff2');
+    src: url('../fonts//Bounded-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Bounded";
-    src: url('./fonts/Bounded-Light.woff2');
+    src: url('../fonts/Bounded-Light.woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Kintsugi";
-    src: url('./fonts/Kintsugi_LVRG-Regular.woff2');
+    src: url('../fonts/Kintsugi_LVRG-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "X-TYPEWRITER";
-    src: url('./fonts/XTypewriter-Regular.woff2');
+    src: url('../fonts/XTypewriter-Regular.woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -1051,8 +1051,16 @@ width: 20.7rem;
     font-size: 1.2rem;
     line-height: 1;
     letter-spacing: -0.02;
-
   }
+  /* JS */
+  body.is-menu-open{
+  overflow: hidden;      
+  height: 100%;
+}
+.mobile-menu__panel{
+  overflow-y: auto;        
+  -webkit-overflow-scrolling: touch;
+}
 }
 
 
