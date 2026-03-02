@@ -441,7 +441,7 @@ object-position: top center;
     font-size: 1.4rem;
     letter-spacing: 0.065em;
     line-height: 1;
-    margin-top: 13rem;
+    margin-top: 2rem;
 }
 .site-footer__top-nav{
     display: grid;
@@ -910,38 +910,126 @@ main{
 /* journey-map */
 
 .journey-map {
-  margin: 231rem 4rem 0;
+  position: relative;
+  margin: 35rem 0 0 4rem;
+  min-height: 115.8rem;    
+  overflow: visible;  
+}
+.journey-map__bg-lines{
+  position: absolute;
+  top: -25rem; 
+  left: 22rem;
+  right: 0;
+  bottom: 0;
+
+  width: 83%;
+  height: 90%;
+  object-fit: cover;          /* если рисунок обрезается — поменяем на contain */
+  object-position: center;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .journey-map__inner {
-  display: grid;
-  grid-template-columns: 42rem minmax(0, 1fr);
-  align-items: start;
   position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 68rem minmax(0, 1fr); /* левый текст | карта */
+  column-gap: 8rem;
+  align-items: start;
+
+  min-height: 115.8rem;
 }
 
 .journey-map__info {
+  padding-top: 5rem; 
+  padding-left: 5rem;
+}
+.journey-map__title{
+  margin: 0;
+  font-family: 'Kintsugi', 'Circe', sans-serif;
+  font-weight: 400;
+  font-size: 5.4rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.journey-map__title-accent{
+  color: #DE4300;     /* чтобы можно было смещать, если нужно */
+}
+.journey-map__title-accent-overlap{
   position: relative;
-  z-index: 2;
+  display: inline-block;
+  white-space: nowrap; 
+  z-index: 4;
+}
+.journey-map__text{
+  margin-top: 37rem;          /* подгоним */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;  
+  font-family: 'X-TYPEWRITER', Courier, monospace;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;              
+}
+.journey-map__media{
+  position: relative;
   padding-top: 4rem;
+  z-index: 3;          
 }
 
-.journey-map__media {
-  position: relative;
-  z-index: 1;
-  margin-left: -10rem;
-}
-
-.journey-map__image {
+.journey-map__image{
   display: block;
   width: 100%;
   height: auto;
 }
+.journey-map__photos{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 4;
+}
+.journey-map__zone{
+  position: absolute;
+  overflow: visible;
+}
+.journey-map__zone--1{ top: 0; left: 0; right: 0; height: 22%; }
+.journey-map__zone--2{ top: 18%; left: 8%; right: 0; height: 28%; }
+.journey-map__zone--3{ top: 48%; left: 10%; right: 0; height: 22%; }
+.journey-map__zone--4{ top: 70%; left: 18%; right: 0; height: 26%; }
+
+.journey-map__photo{
+  position: absolute;
+  width: 8.8rem;       /* подгоним */
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+.journey-map__photo--a{ top: 3rem; left: 16rem; }
+.journey-map__photo--b{ top: -5rem; left: 36rem; }
+
+.journey-map__photo--c{ top: -7rem; left: 48rem; }
+.journey-map__photo--d{ top: 3rem; left: 15rem; }
+
+.journey-map__photo--e{ top: 14rem; left: 12rem; }
+.journey-map__photo--f{ top: 1rem; left: 36rem; }
+.journey-map__photo--g{ top: 0rem; left: 53rem; }
+.journey-map__photo--h{ top: 5rem; left: 23rem; }
+
+.journey-map__photo--i{ top: 0rem; left: 28rem; }
+.journey-map__photo--j{ top: 8rem; left: 41rem; }
+
 
 /* bar-preview */
 
 .bar-preview{
-  margin: 23rem 4rem 0;
+  margin: 10rem 4rem 0;
   box-sizing: border-box;
 }
 .bar-preview__inner{
@@ -978,7 +1066,7 @@ main{
 }
 .bar-preview__title-offset{
   display: inline-block;
-  margin-left: 18rem;
+  margin-left: 5rem;
 }
 .bar-preview__subtitle{  
   margin: 0;
