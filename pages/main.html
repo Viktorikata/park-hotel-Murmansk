@@ -13,8 +13,8 @@
     <section class="hero">
 
         <div class="hero__background">
-        <img class="hero__frame-mobile" src="../image/frame-mobile.png" alt="" aria-hidden="true">         
-        <img class="hero__bg-mobile" src="../image/bg-mobile.png" alt="" aria-hidden="true">         
+        <img class="hero__frame-mobile" src="../image/main/mobile/main-mobile-hero-lines.png" alt="" aria-hidden="true">         
+        <img class="hero__bg-mobile" src="../image/main/mobile/main-mobile-hero-background.png" alt="" aria-hidden="true">         
         <img class="hero__frame" src="../image/hero-frame.png" alt="" aria-hidden="true"> 
         <img class="hero__bg" src="../image/main/main-hero-img.png" alt="" aria-hidden="true"> 
         <img class="hero__lines" src="../image/hero-lines.png" alt="" aria-hidden="true"> 
@@ -174,12 +174,19 @@
         <div class="hero__body">
             <div class="hero__decorations">
                 <img class="hero__decorations-icon" src="../icons/main/main-way.svg" alt="" aria-hidden="true">
+                <img class="hero__decorations-icon-mobile" src="../image/main/mobile/main-mobile-hero-way.png" alt="" aria-hidden="true">
                 <p class="hero__decorations-text">
                 Ваш One-Stop Shop на севере.<br> 
                 Отель, туры и арктическая кухня -<br> 
                 Всё, что нужно для путешествия<br> 
                 по кольскому полуострову, берет<br> 
                 начало здесь.</p>
+
+                <p class="hero__decorations-text-mobile">
+                <span class="hero__decorations-text-offset-mobile">Ваш One-Stop Shop на севере. Отель,<br></span>
+                туры и арктическая кухня - Всё,<br> 
+                что нужно для путешествия по кольскому<br> 
+                полуострову, берет начало здесь.</p>
             </div>  
             <div class="hero__review">
                 <img class="hero__review-img" src="../icons/main/main-review.png" alt="Рейтинг отеля 9.1/10 по результатам 1309 отзывов">
@@ -253,10 +260,62 @@
 
                     </div>
                 </div>
-        </div>
+            </div>
+
+            <div class="showcase-card__inner-mobile">
+                <div class="showcase-card__media-mobile">
+                <img src="../image/main/mobile/main-mobile-showcase-card-background-back.png" 
+                alt="" 
+                class="showcase-card__image--back-mobile">
+
+                <img src="../image/main/mobile/main-mobile-showcase-card-background.png" 
+                alt="Интерьер номера с двумя кроватями" 
+                class="showcase-card__image-mobile">
+
+                <div class="showcase-card__switch" aria-label="Навигация по карточкам">
+                        <button class="showcase-card__switch-btn showcase-card__switch-btn--prev" type="button">
+                                    <span class="showcase-card__switch-text">назад</span>
+                                    <img
+                                    src="../icons/main/main-arrow-prev.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="showcase-card__switch-arrow showcase-card__switch-arrow--prev"
+                                    >
+                        </button>
+
+                        <button class="showcase-card__switch-btn showcase-card__switch-btn--next" type="button">
+                                    <span class="showcase-card__switch-text">вперед</span>
+                                    <img
+                                    src="../icons/main/main-arrow-next.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="showcase-card__switch-arrow showcase-card__switch-arrow--next"
+                                    >
+                        </button>
+
+                </div>
+                </div>
+
+                <div class="showcase-card__description-mobile">
+                    <p class="showcase-card__caption">Отель с характером</p>
+                    <p class="showcase-card__title" id="showcase-card-title-1">
+                            Продумали<br>
+                            всё до мелочей</p>
+                    <p class="showcase-card__text">
+                            Мы позаботились о том, чтобы<br>
+                            в номере можно было по-настоящему отдохнуть.<br>
+                            современная удобная мебель, температура<br> 
+                            +25 и всё под рукой: розетки у кровати, свет,<br>
+                            продуманная планировка. беспокоится не о чем — <br> 
+                            только комфорт и тепло.
+                    </p>
+                </div>                  
+                
+            </div>
         </section>
 
         <section class="room-preview">
+
             <div class="room-preview__inner">
                 <div class="room-preview__info">
                     <div class="room-preview__switch">
@@ -330,11 +389,87 @@
                         alt="" 
                         aria-hidden="true"
                         class="room-preview__slider-pagination">
+
                     </div>
 
                 </div>
 
             </div>
+
+            <div class="room-preview__inner-mobile">
+                    <p class="room-preview__title">
+                        номер<br>
+                        <span class="room-preview__title-offset">стандарт</span>
+                    </p>
+
+                    <p class="room-preview__text">
+                        Этот светлый, изысканный и компактный номер<br>
+                        обладает всем необходимым для полного расслабления<br>
+                        после увлекательно проведённого дня в Мурманске.
+                    </p>
+                    
+                    <div class="room-preview__switch">
+                         <button class="room-preview__switch-btn" type="button" aria-label="Предыдущий номер">
+                            <img 
+                                src="../icons/main/main-switch-btn-left.svg" 
+                                alt="" 
+                                aria-hidden="true"
+                                class="room-preview__switch-icon"
+                            >
+                        </button>
+
+                        <img 
+                            src="../image/main/mobile/main-room-preview-switch-line.svg" 
+                            alt="" 
+                            aria-hidden="true"
+                            class="room-preview__switch-line"
+                        >
+
+                        <button class="room-preview__switch-btn" type="button" aria-label="Следующий номер">
+                            <img 
+                                src="../icons/main/main-switch-btn-right.svg" 
+                                alt="" 
+                                aria-hidden="true"
+                                class="room-preview__switch-icon"
+                            >
+                        </button>
+
+                    </div>
+
+                    <div class="room-preview__media">
+                        <img 
+                        src="../image/main/mobile/main-room-preview-frame.png" 
+                        alt="" 
+                        aria-hidden="true"
+                        class="room-preview__frame">
+                        
+                        <div class="room-preview__image-wrapper">
+                            <img 
+                            src="../image/main/mobile/main-room-preview-image.png" 
+                            alt="Номер стандарт" 
+                            class="room-preview__image">
+
+                            <img 
+                            src="../image/main/mobile/main-room-preview-slider-pagination2.svg" 
+                            alt="" 
+                            aria-hidden="true"
+                            class="room-preview__slider-pagination"
+                            >
+                        </div>
+                    </div>                   
+
+                    <a href="#" class="room-preview__link">
+                        <span class="room-preview__link-text">Подробнее</span>
+                        
+                        <img
+                            src="../icons/main/main-switch-btn-right.svg"
+                            alt=""
+                            aria-hidden="true"
+                            class="room-preview__link-arrow"
+                        >
+                    </a>                   
+            </div>
+
         </section>
 
         <section class="journey-map">
