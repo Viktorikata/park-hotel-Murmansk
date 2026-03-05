@@ -1005,7 +1005,7 @@ main{
 
 .journey-map__photo{
   position: absolute;
-  width: 8.8rem;       /* подгоним */
+  width: 8.8rem;      
   height: auto;
   display: block;
   pointer-events: none;
@@ -1453,7 +1453,10 @@ main{
 .showcase-card__image--back-mobile,
 .showcase-card__image-mobile,
 .showcase-card__inner-mobile,
-.room-preview__inner-mobile
+.room-preview__inner-mobile,
+.journey-map__text--mobile,
+.journey-map__image--mobile,
+.journey-map__bg-lines--mobile
 {
   display: none;
 }
@@ -1503,7 +1506,10 @@ main{
     .showcase-card__image--back,
     .showcase-card__image,
     .showcase-card__inner,
-    .room-preview__inner
+    .room-preview__inner,
+    .journey-map__text--desktop,
+    .journey-map__bg-lines--desctop,
+    .journey-map__image--desktop
     {
       display: none;
     }
@@ -1834,6 +1840,88 @@ main{
   z-index: 3;
   pointer-events: none;
 }
+/* journey-map-mobile */
+
+.journey-map{
+  position: relative;   
+  margin: 14rem 1.6rem 0;
+  min-height: auto;
+  overflow: hidden;
+  z-index: 0; 
+}
+
+.journey-map__bg-lines--mobile{
+  display: block;
+  position: absolute;
+  inset: 0;            
+  width: 50%;
+  height: 45%;
+  object-fit: cover;     
+  object-position: center;
+  pointer-events: none;
+  z-index: 1;
+  left: 4rem;
+  top: 13rem;
+}
+
+.journey-map__inner{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  min-height: auto;
+}
+.journey-map__info{
+  padding: 0;
+}
+.journey-map__title{
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.journey-map__title-accent-overlap{
+  white-space: nowrap;
+}
+.journey-map__media{
+  padding-top: 0;
+  margin: 10rem auto 0 auto;
+  width: 100%;
+  max-width: 34.3rem; 
+}
+.journey-map__image--mobile{
+  display: flex;
+}
+.journey-map__text--mobile{
+  display: flex;
+  flex-direction: column;
+  margin-top: 9rem;
+  gap: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.journey-map__photo{
+  width: 4rem;
+}
+.journey-map__zone--1{ top: 0; left: 0; right: 0; height: 24%; }
+.journey-map__zone--2{ top: 20%; left: 6%; right: 0; height: 28%; }
+.journey-map__zone--3{ top: 50%; left: 8%; right: 0; height: 22%; }
+.journey-map__zone--4{ top: 72%; left: 16%; right: 0; height: 26%; }
+
+.journey-map__photo--a{ top: -0.5rem; left: 1rem; }
+.journey-map__photo--b{ top: -4rem; left: 11.5rem; }
+
+.journey-map__photo--c{ top: -5rem; left: 17rem; }
+.journey-map__photo--d{ top: -0.3rem; left: 3rem; }
+
+.journey-map__photo--e{ top: 3rem; left: 2rem; }
+.journey-map__photo--f{ top: -3rem; left: 12.2rem; }
+.journey-map__photo--g{ top: -2.5rem; left: 20.5rem; }
+.journey-map__photo--h{ top: -2.2rem; left: 4.3rem; }
+
+.journey-map__photo--i{ top: 2rem; left: 16.5rem; }
+.journey-map__photo--j{ top: -0.3rem; left: 10.7rem; }
 
 /* footer */
 .site-footer-mobile{
