@@ -1,0 +1,20 @@
+<svg width="343" height="343" viewBox="0 0 343 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4688_2026)">
+<g opacity="0.7">
+<circle cx="171.569" cy="172.569" r="167.411" stroke="#E9D8C5" stroke-opacity="0.24" stroke-width="5" stroke-dasharray="0.34 3.77"/>
+<circle cx="171.57" cy="172.569" r="173.858" stroke="#E9D8C5" stroke-opacity="0.24" stroke-width="8" stroke-dasharray="0.41 28.86"/>
+</g>
+<g clip-path="url(#clip1_4688_2026)">
+<line y1="-0.5" x2="2133.19" y2="-0.5" transform="matrix(0.706578 -0.707635 0.706578 0.707635 -581.662 923.732)" stroke="#F1E2D2" stroke-opacity="0.06" stroke-dasharray="3.42 6.85"/>
+<line y1="-0.5" x2="2133.19" y2="-0.5" transform="matrix(0.706706 0.707507 -0.706706 0.707507 -583.915 -585.786)" stroke="#F1E2D2" stroke-opacity="0.06" stroke-dasharray="3.42 6.85"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4688_2026">
+<rect width="343" height="343" fill="white"/>
+</clipPath>
+<clipPath id="clip1_4688_2026">
+<rect width="376" height="376" fill="white" transform="translate(-15.7061 -21)"/>
+</clipPath>
+</defs>
+</svg>
