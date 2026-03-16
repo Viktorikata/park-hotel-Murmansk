@@ -363,10 +363,9 @@ document.addEventListener('DOMContentLoaded', () => {
              для полного расслабления после<br>
              увлекательно проведённого дня<br>
              в Мурманске.`,
-      textMobile: 
-            `Этот светлый, изысканный и компактный номер<br>
-                 обладает всем необходимым для полного расслабления<br>
-                 после увлекательно проведённого дня в Мурманске.`,
+      textMobile: `Этот светлый, изысканный и компактный номер<br>
+                   обладает всем необходимым для полного расслабления<br>
+                   после увлекательно проведённого дня в Мурманске.`,
       image: '../image/main/main-room-preview1.png',
       imageMobile: '../image/main/mobile/main-room-preview-image.png',
       alt: 'Номер стандарт'
@@ -380,8 +379,8 @@ document.addEventListener('DOMContentLoaded', () => {
              увлекательно проведённого дня<br>
              в Мурманске.`,
       textMobile: `Этот светлый, изысканный и компактный номер<br>
-                 обладает всем необходимым для полного расслабления<br>
-                 после увлекательно проведённого дня в Мурманске.`,
+                   обладает всем необходимым для полного расслабления<br>
+                   после увлекательно проведённого дня в Мурманске.`,
       image: '../image/main/main-room-preview2.png',
       imageMobile: '../image/main/mobile/main-room-preview-image2.png',
       alt: 'Номер делюкс'
@@ -434,6 +433,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const paginationLinesDesktop = roomPreview.querySelectorAll('.room-preview__pagination-line');
+  const paginationLinesMobile = roomPreview.querySelectorAll('.room-preview__pagination-line-mobile');
+
+  function updatePagination(index) {
+    paginationLinesDesktop.forEach((line, i) => {
+      line.classList.toggle('is-active', i === index);
+    });
+
+    paginationLinesMobile.forEach((line, i) => {
+      line.classList.toggle('is-active', i === index);
+    });
+  }
+
   function animateChange(newIndex) {
     if (isAnimating || newIndex === currentIndex) return;
 
@@ -443,6 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       updateContent(newIndex);
       currentIndex = newIndex;
+      updatePagination(currentIndex);
       showContent();
 
       setTimeout(() => {
@@ -468,6 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
   prevButtons.forEach((button) => {
     button.addEventListener('click', showPrev);
   });
+
+  updatePagination(currentIndex);
 });
 
 /* ________________________special-offer____________________________________ */
