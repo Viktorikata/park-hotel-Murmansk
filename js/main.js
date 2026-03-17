@@ -1,4 +1,4 @@
-const menu = document.querySelector('[data-burger]');
+  const menu = document.querySelector('[data-burger]');
   const panel = document.querySelector('.mobile-menu__panel');
   const openBtn = document.querySelector('[data-burger-open]');
   const closeEls = document.querySelectorAll('[data-burger-close]');
@@ -634,3 +634,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* ________________________footer____________________________________ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Форма отправлена!');
+    });
+  });
+});
