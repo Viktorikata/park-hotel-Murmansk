@@ -335,7 +335,47 @@
                             <p class="site-footer__middle-left-text site-footer-mobile-text">Оставьте свои данные<br>и мы свяжемся с вами</p>
                     </div>
 
-                    <div class="site-footer-mobile-request"></div>
+                    <div class="site-footer-mobile-request">
+                        <section class="feedback-mobile" aria-label="Форма обратной связи">
+                            <form class="feedback-mobile__form" action="#" method="post">
+                            <div class="feedback-mobile__field">
+                                <input
+                                class="feedback-mobile__input"
+                                id="feedback-name-mobile"
+                                name="name"
+                                type="text"
+                                placeholder="Ваше имя"
+                                autocomplete="name"
+                                >
+                            </div>
+
+                            <div class="feedback-mobile__field">
+                                <input
+                                class="feedback-mobile__input"
+                                id="feedback-phone-mobile"
+                                name="phone"
+                                type="tel"
+                                placeholder="Телефон"
+                                autocomplete="tel"
+                                >
+                            </div>
+
+                            <p class="feedback-mobile__policy">
+                                Нажимая кнопку "Отправить", вы соглашаетесь с Политикой конфиденциальности
+                            </p>
+
+                            <button class="feedback-mobile__button" type="submit">
+                                <span class="feedback-mobile__button-text">Отправить</span>
+                                <img
+                                src="../icons/main/main-switch-btn-right.svg"
+                                alt=""
+                                aria-hidden="true"
+                                class="feedback-mobile__button-arrow"
+                                >
+                            </button>
+                            </form>
+                        </section>
+                    </div>
 
                     <div class="site-footer__down">
                         <div class="site-footer__down-left">
@@ -432,6 +472,52 @@
                         </div>
                            
                         <div class="site-footer__middle-left-request">
+                            <section class="feedback" aria-label="Форма обратной связи">
+                                <div class="feedback__inner">
+                                    <form class="feedback__form" action="#" method="post">
+                                    <div class="feedback__fields">
+                                        <div class="feedback__field">
+                                        <input
+                                            class="feedback__input"
+                                            id="feedback-name"
+                                            name="name"
+                                            type="text"
+                                            placeholder="Ваше имя"
+                                            autocomplete="name"
+                                        >
+                                        </div>
+
+                                        <div class="feedback__field">
+                                        <input
+                                            class="feedback__input"
+                                            id="feedback-phone"
+                                            name="phone"
+                                            type="tel"
+                                            placeholder="Телефон"
+                                            autocomplete="tel"
+                                        >
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback__submit-block">
+                                        <p class="feedback__policy">
+                                        Нажимая кнопку "Отправить", вы соглашаетесь<br> 
+                                        с Политикой конфиденциальности
+                                        </p>
+
+                                        <button class="feedback__button" type="submit">
+                                        <span class="feedback__button-text">Отправить</span>
+                                        <img
+                                            src="../icons/main/main-switch-btn-right.svg"
+                                            alt=""
+                                            aria-hidden="true"
+                                            class="special-offer__link-arrow"
+                                        >
+                                        </button>
+                                    </div>
+                                    </form>
+                                </div>
+                                </section>
 
                         </div>
                     </div>
@@ -501,6 +587,17 @@
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape' && !menu.hidden) closeMenu();
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Форма отправлена!');
+    });
+  });
+});
 </script>  
     
 </body>
