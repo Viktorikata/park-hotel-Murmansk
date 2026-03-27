@@ -1565,7 +1565,6 @@ font-weight: 400;
     right: 3rem;
 }
 
-/* заголовок */
 .route-card__title {
     order: 1;
     position: static;
@@ -1593,7 +1592,6 @@ font-weight: 400;
     width: auto;
 }
 
-/* для длинного заголовка "маршрут исследователей" */
 .route-card:nth-child(3) .route-card__title {
     max-width: 2rem;
     font-size: 2rem;
@@ -1605,7 +1603,6 @@ font-weight: 400;
     margin-left: 0;
 }
 
-/* для "ваша личная экспедиция" */
 .route-card:nth-child(4) .route-card__title {
     max-width: 29rem;
 }
@@ -1631,7 +1628,6 @@ font-weight: 500;
     width: 21rem;
 }
 
-/* текст */
 .route-card__text {
     order: 3;
     margin-top: 1.8rem;
@@ -1646,7 +1642,6 @@ font-weight: 400;
     opacity: 0.78;
 }
 
-/* картинка */
 .route-card__image {
     order: 4;
     width: 34.3rem;
@@ -1656,8 +1651,6 @@ font-weight: 400;
     margin: 0;
     margin-top: 2.4rem;
 }
-
-/* ссылка */
 .route-card__link {
     order: 5;
     position: relative;
