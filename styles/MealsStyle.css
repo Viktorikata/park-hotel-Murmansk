@@ -44,6 +44,14 @@
 }
 /* Base */
 html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html {
     font-family: 'Circe', sans-serif;
     color: #F1E2D2;
     font-size: 0.520835vw;
