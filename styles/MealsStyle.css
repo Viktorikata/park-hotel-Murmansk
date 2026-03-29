@@ -1949,6 +1949,8 @@ body.is-menu-open{
   font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
+   width: 100%;
+  max-width: 34.3rem;
 }
 .room-preview__inner-mobile .room-preview__media {
   position: relative;
@@ -2074,6 +2076,9 @@ body.is-menu-open{
 }
 .room-preview--reverse .room-preview__text {
   margin-top: 2rem;
+}
+.room-preview--reverse .room-preview__text {
+        width: 34.3rem;
 }
 .room-preview--reverse .room-preview__switch {
   margin-top: 4rem;
