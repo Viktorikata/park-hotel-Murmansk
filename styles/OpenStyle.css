@@ -1543,11 +1543,6 @@ body.is-menu-open{
     letter-spacing: -0.01em;
 }
 
-.excursion-section__title--offset,
-.excursion-section__title--offset-mobile {
-    margin-left: 1rem;
-}
-
 .excursion-section__content {
     margin-top: 2.4rem;
     display: flex;
@@ -1676,6 +1671,30 @@ body.is-menu-open{
     width: 8.4rem;
     position: static;
     margin-top: 0rem;
+}
+.excursion-section__title--offset{
+    margin-left: 0rem;
+}
+.excursion-section__title--offset-mobile1 {
+    margin-left: 9rem;
+}
+.excursion-section__title--offset-mobile1_1{
+    margin-left: 5rem;
+}
+.excursion-section__title--offset-mobile2{
+    margin-left: 2rem;
+}
+.excursion-section__title--offset-mobile3{
+    margin-left: 5.5rem;
+}
+.excursion-section__title--offset-mobile4{
+    margin-left: 5.5rem;
+}
+.excursion-section__title--offset-mobile5{
+    margin-left: 5.5rem;
+}
+.excursion-section__title--offset-mobile6{
+    margin-left: 5.5rem;
 }
 }
 
