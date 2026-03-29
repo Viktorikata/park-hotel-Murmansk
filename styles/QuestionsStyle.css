@@ -814,6 +814,7 @@ object-position: top center;
 
 .faq-section__right {
     width: 100%;
+    margin-top: -2.6rem;
 }
 
 .faq-item {
@@ -822,6 +823,9 @@ object-position: top center;
 
 .faq-item:last-child {
     border-bottom: 0.1rem solid rgba(241, 226, 210, 0.9);
+}
+.faq-item:first-child {
+  border-top: none;
 }
 
 .faq-item__button {
@@ -1472,10 +1476,6 @@ body.is-menu-open{
     height: auto;
 }
 
-.faq-section__right {
-    width: 100%;
-}
-
 .faq-item__button {
     min-height: 4.6rem;
     padding: 3rem 0 1.3rem;
@@ -1506,6 +1506,9 @@ body.is-menu-open{
     letter-spacing: 0.04em;
     font-weight: 300;
     opacity: 0.7;
+}
+.faq-section__right{
+    margin-top: -2rem;
 }
 }
 
