@@ -1733,4 +1733,13 @@ body.is-menu-open{
 .excursion-section__title--offset-mobile6{
     margin-left: 5.5rem;
 }
+.excursion-section__bg-decor{
+    left: -2rem;
+    top: 76rem;
+    width: 40rem;
+}
+.excursion-section__bg-decor2,
+.excursion-section__bg-decor3 {
+    display: none;
+}
 }
