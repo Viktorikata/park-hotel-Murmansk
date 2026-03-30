@@ -1715,7 +1715,11 @@ body.is-menu-open{
     margin-left: 7rem;
 }
 .excursion-section__title--offset-mobile2{
-    margin-left: 10.5rem;
+    margin-left: 12.5rem;
+}
+.excursion-section__title--offset-mobile2_1{
+    display: block;
+    margin-left: 5rem;
 }
 .excursion-section__title--offset-mobile3{
     margin-left: 0rem;
