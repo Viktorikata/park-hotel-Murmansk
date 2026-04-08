@@ -1127,18 +1127,6 @@ main {
   will-change: transform, opacity;
 }
 
-.room-preview__title.is-hidden,
-.room-preview__text.is-hidden {
-  opacity: 0;
-  transform: translateY(-2rem);
-}
-
-.room-preview__image.is-hidden {
-  opacity: 0;
-  transform: scale(1.03);
-  filter: blur(0.4rem);
-}
-
 .room-preview__switch-btn {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
@@ -1153,11 +1141,6 @@ main {
 .room-preview__frame {
   transition: opacity 0.45s ease, transform 0.45s ease, filter 0.45s ease;
   will-change: transform, opacity;
-}
-.room-preview__frame.is-hidden {
-  opacity: 0;
-  transform: scale(1.02);
-  filter: blur(0.3rem);
 }
 
 /* section 2 */
@@ -1196,6 +1179,29 @@ main {
 }
 .room-preview--reverse .room-preview__switch {
         margin-top: 14rem;
+}
+/*slider*/
+.room-preview__image-wrapper {
+  position: absolute;
+  overflow: hidden;
+}
+
+.room-preview__image-wrapper .room-preview__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.room-preview__image-wrapper .room-preview__image.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 
@@ -1971,19 +1977,6 @@ body.is-menu-open{
   z-index: 0;
 }
 
-.room-preview__inner-mobile .room-preview__image-wrapper {
-  position: absolute;
-  z-index: 2;
-  padding: 2rem;
-  inset: 0;
-}
-
-.room-preview__inner-mobile .room-preview__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .room-preview__switch {
   display: inline-flex;
   align-self: flex-end;
@@ -2047,26 +2040,7 @@ body.is-menu-open{
   height: 0.3rem;
   background-color: #F1E2D2;
 }
-/* mobile animation */
-.room-preview__title,
-.room-preview__text,
-.room-preview__image,
-.room-preview__frame {
-  transition: opacity 0.45s ease, transform 0.45s ease, filter 0.45s ease;
-  will-change: transform, opacity;
-}
 
-.room-preview__title.is-hidden,
-.room-preview__text.is-hidden {
-  opacity: 0;
-  transform: translateY(-2rem);
-}
-
-.room-preview__image.is-hidden,
-.room-preview__frame.is-hidden {
-  opacity: 0;
-  transform: translateY(-2rem);
-} 
 /*block 2*/
 .room-preview--reverse .room-preview__title{
   font-size: 2.4rem;
@@ -2086,5 +2060,85 @@ body.is-menu-open{
 .site-footer {
     margin-top: 11rem;
 }
+
+/*slider*/
+.room-preview__inner-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.room-preview__inner-mobile .room-preview__media {
+  position: relative;
+  min-height: 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.room-preview__inner-mobile .room-preview__frame {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.room-preview__inner-mobile .room-preview__image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.room-preview__inner-mobile .room-preview__image {
+  position: absolute;
+  inset: 2rem;
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease, transform 0.55s ease, filter 0.55s ease;
+  will-change: opacity, transform;
+  transform: scale(1.02);
+  filter: blur(0.2rem);
+}
+
+.room-preview__inner-mobile .room-preview__image.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+.room-preview__inner-mobile .room-preview__pagination-mobile {
+  position: absolute;
+  top: 3.5rem;
+  right: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.room-preview__inner-mobile .room-preview__pagination-line-mobile {
+  display: block;
+  width: 1.2rem;
+  height: 0.2rem;
+  background-color: rgba(241, 226, 210, 0.45);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.room-preview__inner-mobile .room-preview__pagination-line-mobile.is-active {
+  height: 0.3rem;
+  background-color: #F1E2D2;
+}
+
 
   }

@@ -158,480 +158,87 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const roomPreviews = document.querySelectorAll('[data-room-preview]');
 
-  if (!roomPreviews.length) return;
+  roomPreviews.forEach((roomPreview) => {
+    const desktopImages = roomPreview.querySelectorAll(
+      '.room-preview__inner .room-preview__image-wrapper .room-preview__image'
+    );
 
-  const roomGroups = [
-    [
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">стандарт</span>',
-        text: `Этот светлый, изысканный и компактный<br>
-               номер обладает всем необходимым<br>
-               для полного расслабления после<br>
-               увлекательно проведённого дня<br>
-               в Мурманске.`,
-        textMobile: `Этот светлый, изысканный и компактный номер<br>
-                     обладает всем необходимым для полного расслабления<br>
-                     после увлекательно проведённого дня в Мурманске.`,
-        image: '../image/rooms/standard.png',
-        imageMobile: '../image/rooms/standard.png',
-        alt: 'Номер стандарт'
-      },
-    ],
+    const mobileImages = roomPreview.querySelectorAll(
+      '.room-preview__inner-mobile .room-preview__image-wrapper .room-preview__image'
+    );
 
-    [
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">комфорт</span>',
-        text:  `Этот светлый, изысканный и компактный<br>
-                        номер обладает всем необходимым<br>
-                        для полного расслабления после<br>
-                        увлекательно проведённого дня<br>
-                        в Мурманске.`,
-        textMobile: `Номер Комфорт сочетает уют и пространство: здесь<br>
-        можно отдохнуть после долгих прогулок, насладиться<br>
-        тишиной и теплом. Интерьер продуман до мелочей,<br>
-        чтобы вы чувствовали себя как дома — в сердце<br>
-        северной экспедиции.`,
-        image: '../image/rooms/comfort.png',
-        imageMobile: '../image/rooms/comfort.png',
-        alt: 'Номер комфорт'
-      }      
-    ],
+    const desktopPagination = roomPreview.querySelectorAll(
+      '.room-preview__pagination-line'
+    );
 
-    [
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      },
-      {
-        title: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        titleMobile: 'номер<br><span class="room-preview__title-offset">делюкс</span>',
-        text: `Номер Делюкс создан для тех, кто ценит<br>
-               особенное ощущение отдыха. Простор,<br>
-               мягкий свет и спокойная атмосфера<br>
-               позволяют восстановить силы и насладиться<br>
-               каждым моментом путешествия на Севере.`,
-        textMobile: `Номер Делюкс создан для тех, кто ценит особенное<br>
-                     ощущение отдыха. Простор, мягкий свет и спокойная<br>
-                     атмосфера позволяют восстановить силы <br>
-                    и насладиться каждым моментом путешествия на<br>
-                    Севере.`,
-        image: '../image/rooms/deluxe.png',
-        imageMobile: '../image/rooms/deluxe.png',
-        alt: 'Номер делюкс'
-      }      
-    ]
-  ];
+    const mobilePagination = roomPreview.querySelectorAll(
+      '.room-preview__pagination-line-mobile'
+    );
 
-  roomPreviews.forEach((roomPreview, sectionIndex) => {
     const prevButtons = roomPreview.querySelectorAll('[data-prev]');
     const nextButtons = roomPreview.querySelectorAll('[data-next]');
 
-    const titleEl = roomPreview.querySelector('[data-title]');
-    const textEl = roomPreview.querySelector('[data-text]');
-    const imageEl = roomPreview.querySelector('[data-image]');
-    const frameEl = roomPreview.querySelector('.room-preview__inner .room-preview__frame');
-
-    const titleMobileEl = roomPreview.querySelector('[data-title-mobile]');
-    const textMobileEl = roomPreview.querySelector('[data-text-mobile]');
-    const imageMobileEl = roomPreview.querySelector('[data-image-mobile]');
-    const frameMobileEl = roomPreview.querySelector('.room-preview__inner-mobile .room-preview__frame');
-
-    const rooms = roomGroups[sectionIndex];
-
-    if (!rooms || !rooms.length) return;
-
     let currentIndex = 0;
-    let isAnimating = false;
-    const animationDuration = 450;
 
-    const paginationLinesDesktop = roomPreview.querySelectorAll('.room-preview__pagination-line');
-    const paginationLinesMobile = roomPreview.querySelectorAll('.room-preview__pagination-line-mobile');
-
-    function hideContent() {
-      titleEl?.classList.add('is-hidden');
-      textEl?.classList.add('is-hidden');
-      imageEl?.classList.add('is-hidden');
-      frameEl?.classList.add('is-hidden');
-
-      titleMobileEl?.classList.add('is-hidden');
-      textMobileEl?.classList.add('is-hidden');
-      imageMobileEl?.classList.add('is-hidden');
-      frameMobileEl?.classList.add('is-hidden');
+    function isMobile() {
+      return window.innerWidth <= 768;
     }
 
-    function showContent() {
-      titleEl?.classList.remove('is-hidden');
-      textEl?.classList.remove('is-hidden');
-      imageEl?.classList.remove('is-hidden');
-      frameEl?.classList.remove('is-hidden');
-
-      titleMobileEl?.classList.remove('is-hidden');
-      textMobileEl?.classList.remove('is-hidden');
-      imageMobileEl?.classList.remove('is-hidden');
-      frameMobileEl?.classList.remove('is-hidden');
+    function getCurrentImages() {
+      return isMobile() ? mobileImages : desktopImages;
     }
 
-    function updateContent(index) {
-      const room = rooms[index];
-
-      if (titleEl) titleEl.innerHTML = room.title;
-      if (textEl) textEl.innerHTML = room.text;
-      if (imageEl) {
-        imageEl.src = room.image;
-        imageEl.alt = room.alt;
-      }
-
-      if (titleMobileEl) titleMobileEl.innerHTML = room.titleMobile || room.title;
-      if (textMobileEl) textMobileEl.innerHTML = room.textMobile || room.text;
-      if (imageMobileEl) {
-        imageMobileEl.src = room.imageMobile || room.image;
-        imageMobileEl.alt = room.alt;
-      }
-    }
-
-    function updatePagination(index) {
-      paginationLinesDesktop.forEach((line, i) => {
-        line.classList.toggle('is-active', i === index);
+    function updateSlider(index) {
+      desktopImages.forEach((image, i) => {
+        image.classList.toggle('is-active', !isMobile() && i === index);
       });
 
-      paginationLinesMobile.forEach((line, i) => {
-        line.classList.toggle('is-active', i === index);
+      mobileImages.forEach((image, i) => {
+        image.classList.toggle('is-active', isMobile() && i === index);
       });
-    }
 
-    function animateChange(newIndex) {
-      if (isAnimating || newIndex === currentIndex) return;
+      desktopPagination.forEach((line, i) => {
+        line.classList.toggle('is-active', !isMobile() && i === index);
+      });
 
-      isAnimating = true;
-      hideContent();
-
-      setTimeout(() => {
-        updateContent(newIndex);
-        currentIndex = newIndex;
-        updatePagination(currentIndex);
-        showContent();
-
-        setTimeout(() => {
-          isAnimating = false;
-        }, animationDuration);
-      }, animationDuration);
+      mobilePagination.forEach((line, i) => {
+        line.classList.toggle('is-active', isMobile() && i === index);
+      });
     }
 
     function showNext() {
-      const nextIndex = (currentIndex + 1) % rooms.length;
-      animateChange(nextIndex);
+      const images = getCurrentImages();
+      if (!images.length) return;
+      currentIndex = (currentIndex + 1) % images.length;
+      updateSlider(currentIndex);
     }
 
     function showPrev() {
-      const prevIndex = (currentIndex - 1 + rooms.length) % rooms.length;
-      animateChange(prevIndex);
+      const images = getCurrentImages();
+      if (!images.length) return;
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateSlider(currentIndex);
     }
-
-    nextButtons.forEach((button) => {
-      button.addEventListener('click', showNext);
-    });
 
     prevButtons.forEach((button) => {
       button.addEventListener('click', showPrev);
     });
 
-    updateContent(currentIndex);
-    updatePagination(currentIndex);
+    nextButtons.forEach((button) => {
+      button.addEventListener('click', showNext);
+    });
+
+    window.addEventListener('resize', () => {
+      const images = getCurrentImages();
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      updateSlider(currentIndex);
+    });
+
+    updateSlider(currentIndex);
   });
 });
-
 /* ________________________footer____________________________________ */
 
 document.addEventListener('DOMContentLoaded', () => {
